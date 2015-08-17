@@ -1,0 +1,39 @@
+{
+  "name": "tempnode",
+  "chef_environment": "_default",
+  "normal": {
+   "tags": [
+   ]
+  },
+  "run_list": [
+  "recipe[mydocker::init]"
+  ],
+  "server_ip": "172.20.75.189",
+  "server_url": "chefserver.example.com",
+  "server_user_name": "chef-server",
+  "server_password": "server123",
+  "centos": {
+                "yes_no": "YES",
+                "name": "centos_container",
+                "version": {
+                        "7": 1,
+						"6": 0
+                        }
+                },
+        "ubuntu": {
+                "yes_no": "NO",
+                "name": "ubuntu_container",
+                "version": {
+					"14.04": 1,
+					"12.04": 1
+                        }
+                },
+        "debian": {
+                "yes_no": "NO",
+                "name": "debian_container",
+                "version": {
+                        "6": 1,
+						"7": 1
+                        }
+                }
+}
