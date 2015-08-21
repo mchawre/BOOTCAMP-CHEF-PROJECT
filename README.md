@@ -1,7 +1,7 @@
 # AUTOMATION OF DOCKER USING CHEF
 
 PURPOSE :
-=========
+---------
 
 Automate :-
 
