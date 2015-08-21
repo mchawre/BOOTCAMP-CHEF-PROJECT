@@ -17,7 +17,7 @@ sudo echo "chef_server_url  'https://$5/organizations/$2'" >> /etc/chef/client.r
 sudo echo "node_name                '$1'" >> /etc/chef/client.rb
 sudo echo "validation_client_name   '$2-validator'" >> /etc/chef/client.rb
 sudo echo "ssl_verify_mode    :verify_none" >> /etc/chef/client.rb
-apt-get install -y openssh-server openssh-client
+apt-get install -y openssh-server openssh-client sshpass
 apt-get install -y curl
 curl -L https://www.opscode.com/chef/install.sh | bash
 sudo sshpass -p $7 scp -o StrictHostKeyChecking=no $6@$4:/home/$6/pem/$2-validator.pem /etc/chef
